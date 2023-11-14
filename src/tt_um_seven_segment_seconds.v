@@ -25,11 +25,11 @@ module tt_um_seven_segment_seconds #( parameter MAX_COUNT = 24'd10_000_000 ) (
     int i;
 
     for (int i=0; i<8; i++) begin
-        uio_oe = 1'b1;
+        assign uio_oe = 1'b1;
     end
 
     for (int i=0; i<8; i++) begin
-        uio_out = second_counter[i];
+        assign uio_out = second_counter[i];
     end
 
     // external clock is 10MHz, so need 24 bit counter
